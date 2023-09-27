@@ -21,20 +21,21 @@ namespace PictureBox.Image.Testes
             InitializeComponent();
         }
 
+        // Save the modified image
         #region MACHADO_FileManagement
-
         private void SaveImage()
         {
-            pictureBox2.SizeMode = PictureBoxSizeMode.AutoSize;
+            rightPictureBox.SizeMode = PictureBoxSizeMode.AutoSize;
             FolderBrowserDialog fl = new FolderBrowserDialog();
             if (fl.ShowDialog() != DialogResult.Cancel)
             {
 
-                pictureBox2.Image.Save(fl.SelectedPath + @"\" + tbx_imageName.Text + @".png", System.Drawing.Imaging.ImageFormat.Png);
+                rightPictureBox.Image.Save(fl.SelectedPath + @"\" + tbx_imageName.Text + @".png", System.Drawing.Imaging.ImageFormat.Png);
             };
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            rightPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
         }
 
+        // Load the initial image
         private void LoadImage()
         {
             OpenFileDialog op = new OpenFileDialog();
@@ -42,19 +43,18 @@ namespace PictureBox.Image.Testes
             if (dr == DialogResult.OK)
             {
                 string path = op.FileName;
-                pictureBox1.Load(path);
-                Bitmap temp = new Bitmap(pictureBox1.Image,
-                   new Size(pictureBox1.Width, pictureBox1.Height));
-                pictureBox1.Image = temp;
-                map = new Bitmap(pictureBox1.Image);
-                Origin = pictureBox1.Image;
-                tbx_imageName.Text = Path.GetFileName(op.FileName) + "_edgeDetected";
-                FilteredImage = pictureBox1.Image;
+                leftPictureBox.Load(path);
+                Bitmap temp = new Bitmap(leftPictureBox.Image,
+                   new Size(leftPictureBox.Width, leftPictureBox.Height));
+                leftPictureBox.Image = temp;
+                map = new Bitmap(leftPictureBox.Image);
+                Origin = leftPictureBox.Image;
+                tbx_imageName.Text = Path.GetFileNameWithoutExtension(op.FileName) + "_edgeDetected"; // CHAT GPT : 
+                FilteredImage = leftPictureBox.Image;
             }
         }
 
         #endregion
-
 
         #region MACHADO_Events      
 
@@ -73,13 +73,11 @@ namespace PictureBox.Image.Testes
 
         #endregion
 
-
         #region MACHADO_ApplyFilters
 
         public void Button_reset_filter(object sender, EventArgs e)
         {
-
-            pictureBox1.Image = Origin;
+            leftPictureBox.Image = Origin;
             btn_rainbowFilter.Checked = false;
             btn_swapFilter.Checked = false;
             FilteredImage = Origin;
@@ -87,21 +85,19 @@ namespace PictureBox.Image.Testes
 
         public void Button_apply_swapFilter(object sender, EventArgs e)
         {
-            if(Origin != null)
+            if (Origin != null)
             {
-                pictureBox1.Image = FilteredImage;
+                leftPictureBox.Image = FilteredImage;
                 if (btn_swapFilter.Checked)
                 {
-                    pictureBox1.Image = ImageFilters.FilterSwap(new Bitmap(FilteredImage));
+                    leftPictureBox.Image = ImageFilters.RevertSwapFilter(new Bitmap(FilteredImage));
 
                 }
                 else
                 {
-                    pictureBox1.Image = ImageFilters.FilterSwap(new Bitmap(FilteredImage));
+                    leftPictureBox.Image = ImageFilters.SwapFilter(new Bitmap(FilteredImage));
                 }
-                
-                
-                FilteredImage = pictureBox1.Image;
+                FilteredImage = leftPictureBox.Image;
             }
         }
 
@@ -109,32 +105,39 @@ namespace PictureBox.Image.Testes
         {
             if (Origin != null)
             {
-                pictureBox1.Image = FilteredImage;
-                pictureBox1.Image = ImageFilters.RainbowFilter(new Bitmap(FilteredImage));
-                FilteredImage = pictureBox1.Image;
+                leftPictureBox.Image = FilteredImage;
+                if (btn_rainbowFilter.Checked)
+                {
+                    leftPictureBox.Image = ImageFilters.RainbowFilter(new Bitmap(FilteredImage));
+                }
+                else
+                {
+                    leftPictureBox.Image = ImageFilters.RevertRainbowFilter(new Bitmap(FilteredImage));
+                }
+                FilteredImage = leftPictureBox.Image;
             }
         }
 
         #endregion
 
-        private void Button_applyFilters(object sender, EventArgs e)
+        private void Btn_apply_Filters(object sender, EventArgs e)
         {
-            pictureBox2.Image = pictureBox1.Image;
+            rightPictureBox.Image = leftPictureBox.Image;
+            btn_saveImage.Enabled = true;
         }
 
-        private void btn_apply_edgeDetection_Click(object sender, EventArgs e)
+        private void Btn_apply_edgeDetection_Click(object sender, EventArgs e)
         {
-            if(listBoxXFilter.SelectedItems != null && listBoxYFilter.SelectedItems != null) 
-            { 
+            if (xFilter_listBox.SelectedItem != null && yFilter_listBox.SelectedItem != null)
+            {
                 ImageEdgesDetection imageEdgesDetection = new ImageEdgesDetection();
-                pictureBox2.Image = imageEdgesDetection.DetectEdges(listBoxXFilter.SelectedItems.ToString(), listBoxYFilter.SelectedItems.ToString(), new Bitmap(pictureBox2.Image));
-                //imageEdgesDetection.ConvertToXYCoord(new Bitmap(pictureBox2.Image));
+                rightPictureBox.Image = imageEdgesDetection.DetectEdges(xFilter_listBox.SelectedItem.ToString(), yFilter_listBox.SelectedItem.ToString(), new Bitmap(rightPictureBox.Image));
             }
         }
 
         private void Button_reset_EdgeDetection(object sender, EventArgs e)
         {
-            pictureBox2.Image = FilteredImage;
+            rightPictureBox.Image = FilteredImage;
         }
     }
 }

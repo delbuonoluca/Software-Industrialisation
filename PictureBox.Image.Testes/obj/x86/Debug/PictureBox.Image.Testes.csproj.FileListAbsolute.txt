@@ -117,3 +117,14 @@ C:\Users\ludb\OneDrive - HESSO\Ecole\Semestre 7\625-1 Industrialisation\EdgeDete
 C:\Users\ludb\OneDrive - HESSO\Ecole\Semestre 7\625-1 Industrialisation\EdgeDetection\Pixel_Manipulation\C#\PictureBox.Image.Testes\obj\x86\Debug\PictureBox.Image.Testes.exe
 C:\Users\ludb\OneDrive - HESSO\Ecole\Semestre 7\625-1 Industrialisation\EdgeDetection\Pixel_Manipulation\C#\PictureBox.Image.Testes\obj\x86\Debug\PictureBox.Image.Testes.pdb
 C:\Users\lucad\OneDrive - HESSO\Ecole\Semestre 7\625-1 Industrialisation\EdgeDetection\Pixel_Manipulation\C#\PictureBox.Image.Testes\obj\x86\Debug\PictureBox.Image.Testes.Filters_EdgeDetection.resources
+C:\Users\guillaum.rey2\source\repos\Software-Industrialisation\PictureBox.Image.Testes\bin\Debug\PictureBox.Image.Testes.exe.config
+C:\Users\guillaum.rey2\source\repos\Software-Industrialisation\PictureBox.Image.Testes\bin\Debug\PictureBox.Image.Testes.exe
+C:\Users\guillaum.rey2\source\repos\Software-Industrialisation\PictureBox.Image.Testes\bin\Debug\PictureBox.Image.Testes.pdb
+C:\Users\guillaum.rey2\source\repos\Software-Industrialisation\PictureBox.Image.Testes\obj\x86\Debug\PictureBox.Image.Testes.csproj.AssemblyReference.cache
+C:\Users\guillaum.rey2\source\repos\Software-Industrialisation\PictureBox.Image.Testes\obj\x86\Debug\PictureBox.Image.Testes.Filters_EdgeDetection.resources
+C:\Users\guillaum.rey2\source\repos\Software-Industrialisation\PictureBox.Image.Testes\obj\x86\Debug\PictureBox.Image.Testes.Properties.Resources.resources
+C:\Users\guillaum.rey2\source\repos\Software-Industrialisation\PictureBox.Image.Testes\obj\x86\Debug\PictureBox.Image.Testes.csproj.GenerateResource.cache
+C:\Users\guillaum.rey2\source\repos\Software-Industrialisation\PictureBox.Image.Testes\obj\x86\Debug\PictureBox.Image.Testes.csproj.CoreCompileInputs.cache
+C:\Users\guillaum.rey2\source\repos\Software-Industrialisation\PictureBox.Image.Testes\obj\x86\Debug\PictureBox.Image.Testes.csproj.CopyComplete
+C:\Users\guillaum.rey2\source\repos\Software-Industrialisation\PictureBox.Image.Testes\obj\x86\Debug\PictureBox.Image.Testes.exe
+C:\Users\guillaum.rey2\source\repos\Software-Industrialisation\PictureBox.Image.Testes\obj\x86\Debug\PictureBox.Image.Testes.pdb

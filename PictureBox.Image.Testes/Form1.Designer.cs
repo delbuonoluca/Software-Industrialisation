@@ -1,20 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Windows.Forms;
 
 namespace PictureBox.Image.Testes
 {
     partial class Filters_EdgeDetection
     {
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox leftPictureBox;
         private System.Windows.Forms.Button btn_loadImage;
         private System.Windows.Forms.Button btn_saveImage;
         private System.Windows.Forms.Button btn_resetFilter;
         private System.Windows.Forms.TextBox tbx_imageName;
         private System.Windows.Forms.CheckBox btn_swapFilter;
         private System.Windows.Forms.CheckBox btn_rainbowFilter;
-        //private List<String> xyFilters;
-        private System.Windows.Forms.ListBox listBoxYFilter;
-        private System.Windows.Forms.ListBox listBoxXFilter;
+        private System.Windows.Forms.Button btn_apply_filters;
+        public System.Windows.Forms.PictureBox rightPictureBox;
+        private System.Windows.Forms.Label label_yFilter;
+        private System.Windows.Forms.Label label_xFilter;
+        private System.Windows.Forms.ListBox xFilter_listBox;
+        private System.Windows.Forms.ListBox yFilter_listBox;
+        private System.Windows.Forms.Button btn_apply_edgeDetection;
+        private System.Windows.Forms.Button btn_reset_edgeDetection;
+        private System.Windows.Forms.Label label_PixelManipulation;
+        private System.Windows.Forms.Label label_EdgeDetection;
 
         /// <summary>
         /// Required designer variable.
@@ -42,39 +50,60 @@ namespace PictureBox.Image.Testes
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.leftPictureBox = new System.Windows.Forms.PictureBox();
             this.btn_loadImage = new System.Windows.Forms.Button();
             this.btn_resetFilter = new System.Windows.Forms.Button();
             this.btn_saveImage = new System.Windows.Forms.Button();
             this.tbx_imageName = new System.Windows.Forms.TextBox();
             this.btn_swapFilter = new System.Windows.Forms.CheckBox();
             this.btn_rainbowFilter = new System.Windows.Forms.CheckBox();
-            this.listBoxYFilter = new System.Windows.Forms.ListBox();
-            this.listBoxXFilter = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.btn_apply_filters = new System.Windows.Forms.Button();
+            this.rightPictureBox = new System.Windows.Forms.PictureBox();
+            this.label_yFilter = new System.Windows.Forms.Label();
+            this.label_xFilter = new System.Windows.Forms.Label();
             this.xFilter_listBox = new System.Windows.Forms.ListBox();
             this.yFilter_listBox = new System.Windows.Forms.ListBox();
             this.btn_apply_edgeDetection = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.btn_reset_edgeDetection = new System.Windows.Forms.Button();
+            this.label_PixelManipulation = new System.Windows.Forms.Label();
+            this.label_EdgeDetection = new System.Windows.Forms.Label();
+            List<string> filterItems = new List<string>
+            {
+                "",
+                "Laplacian3x3",
+                "Laplacian5x5",
+                "Sobel3x3Horizontal",
+                "Sobel3x3Vertical",
+                "Prewitt3x3Horizontal",
+                "Prewitt3x3Vertical",
+                "Kirsch3x3Horizontal",
+                "Kirsch3x3Vertical"
+            };
+            ((System.ComponentModel.ISupportInitialize)(this.leftPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rightPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // Left picture box
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 49);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(552, 428);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.leftPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.leftPictureBox.InitialImage = null;
+            this.leftPictureBox.Location = new System.Drawing.Point(12, 49);
+            this.leftPictureBox.Name = "leftPictureBox";
+            this.leftPictureBox.Size = new System.Drawing.Size(552, 428);
+            this.leftPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.leftPictureBox.TabIndex = 0;
+            this.leftPictureBox.TabStop = false;
+            // 
+            // Right picture box
+            // 
+            this.rightPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.rightPictureBox.InitialImage = null;
+            this.rightPictureBox.Location = new System.Drawing.Point(674, 49);
+            this.rightPictureBox.Name = "rightPictureBox";
+            this.rightPictureBox.Size = new System.Drawing.Size(552, 428);
+            this.rightPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.rightPictureBox.TabIndex = 49;
+            this.rightPictureBox.TabStop = false;
             // 
             // btn_loadImage
             // 
@@ -104,6 +133,7 @@ namespace PictureBox.Image.Testes
             this.btn_saveImage.TabIndex = 36;
             this.btn_saveImage.Text = "Save Image";
             this.btn_saveImage.UseVisualStyleBackColor = true;
+            this.btn_saveImage.Enabled = false;
             this.btn_saveImage.Click += new System.EventHandler(this.Button_saveImage);
             // 
             // tbx_imageName
@@ -133,90 +163,45 @@ namespace PictureBox.Image.Testes
             this.btn_rainbowFilter.UseVisualStyleBackColor = true;
             this.btn_rainbowFilter.Click += new System.EventHandler(this.Button_apply_rainbowFilter);
             // 
-            // listBoxYFilter
+            // btn_apply_filters
             // 
-            this.listBoxYFilter.Location = new System.Drawing.Point(0, 0);
-            this.listBoxYFilter.Name = "listBoxYFilter";
-            this.listBoxYFilter.Size = new System.Drawing.Size(120, 96);
-            this.listBoxYFilter.TabIndex = 0;
+            this.btn_apply_filters.Location = new System.Drawing.Point(570, 246);
+            this.btn_apply_filters.Name = "btn_apply_filters";
+            this.btn_apply_filters.Size = new System.Drawing.Size(98, 30);
+            this.btn_apply_filters.TabIndex = 48;
+            this.btn_apply_filters.Text = "Apply filters";
+            this.btn_apply_filters.UseVisualStyleBackColor = true;
+            this.btn_apply_filters.Click += new System.EventHandler(this.Btn_apply_Filters);
             // 
-            // listBoxXFilter
+            // label_yFilter
             // 
-            this.listBoxXFilter.Location = new System.Drawing.Point(0, 0);
-            this.listBoxXFilter.Name = "listBoxXFilter";
-            this.listBoxXFilter.Size = new System.Drawing.Size(120, 96);
-            this.listBoxXFilter.TabIndex = 0;
+            this.label_yFilter.AutoSize = true;
+            this.label_yFilter.Location = new System.Drawing.Point(963, 486);
+            this.label_yFilter.Name = "label_yFilter";
+            this.label_yFilter.Size = new System.Drawing.Size(39, 13);
+            this.label_yFilter.TabIndex = 52;
+            this.label_yFilter.Text = "Y Filter";
             // 
-            // button1
+            // label_xFilter
             // 
-            this.button1.Location = new System.Drawing.Point(570, 246);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 30);
-            this.button1.TabIndex = 48;
-            this.button1.Text = "Apply filters";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Button_applyFilters);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.InitialImage = null;
-            this.pictureBox2.Location = new System.Drawing.Point(674, 49);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(552, 428);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 49;
-            this.pictureBox2.TabStop = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(963, 486);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 13);
-            this.label2.TabIndex = 52;
-            this.label2.Text = "Y Filter";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(820, 486);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 13);
-            this.label1.TabIndex = 53;
-            this.label1.Text = "X Filter";
-            // 
+            this.label_xFilter.AutoSize = true;
+            this.label_xFilter.Location = new System.Drawing.Point(820, 486);
+            this.label_xFilter.Name = "label_xFilter";
+            this.label_xFilter.Size = new System.Drawing.Size(39, 13);
+            this.label_xFilter.TabIndex = 53;
+            this.label_xFilter.Text = "X Filter";
             // xFilter_listBox
-            // 
+            this.xFilter_listBox = new ListBox();
             this.xFilter_listBox.FormattingEnabled = true;
-            this.xFilter_listBox.Items.AddRange(new object[] {
-            "",
-            "Laplacian3x3",
-            "Laplacian5x5",
-            "Sobel3x3Horizontal",
-            "Sobel3x3Vertical",
-            "Prewitt3x3Horizontal",
-            "Prewitt3x3Vertical",
-            "Kirsch3x3Horizontal",
-            "Kirsch3x3Vertical"});
+            this.xFilter_listBox.Items.AddRange(filterItems.ToArray());
             this.xFilter_listBox.Location = new System.Drawing.Point(820, 505);
             this.xFilter_listBox.Name = "xFilter_listBox";
             this.xFilter_listBox.Size = new System.Drawing.Size(120, 95);
             this.xFilter_listBox.TabIndex = 51;
-            // 
             // yFilter_listBox
-            // 
+            this.yFilter_listBox = new ListBox();
             this.yFilter_listBox.FormattingEnabled = true;
-            this.yFilter_listBox.Items.AddRange(new object[] {
-            "",
-            "Laplacian3x3",
-            "Laplacian5x5",
-            "Sobel3x3Horizontal",
-            "Sobel3x3Vertical",
-            "Prewitt3x3Horizontal",
-            "Prewitt3x3Vertical",
-            "Kirsch3x3Horizontal",
-            "Kirsch3x3Vertical"});
+            this.yFilter_listBox.Items.AddRange(filterItems.ToArray());
             this.yFilter_listBox.Location = new System.Drawing.Point(966, 505);
             this.yFilter_listBox.Name = "yFilter_listBox";
             this.yFilter_listBox.Size = new System.Drawing.Size(120, 95);
@@ -230,79 +215,67 @@ namespace PictureBox.Image.Testes
             this.btn_apply_edgeDetection.TabIndex = 54;
             this.btn_apply_edgeDetection.Text = "Apply Edge Detection";
             this.btn_apply_edgeDetection.UseVisualStyleBackColor = true;
-            this.btn_apply_edgeDetection.Click += new System.EventHandler(this.btn_apply_edgeDetection_Click);
+            this.btn_apply_edgeDetection.Click += new System.EventHandler(this.Btn_apply_edgeDetection_Click);
             // 
-            // button2
+            // btn_reset_edgeDetection
             // 
-            this.button2.Location = new System.Drawing.Point(726, 541);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 55;
-            this.button2.Text = "Reset Edge Detection";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.Button_reset_EdgeDetection);
+            this.btn_reset_edgeDetection.Location = new System.Drawing.Point(726, 541);
+            this.btn_reset_edgeDetection.Name = "btn_reset_edgeDetection";
+            this.btn_reset_edgeDetection.Size = new System.Drawing.Size(75, 23);
+            this.btn_reset_edgeDetection.TabIndex = 55;
+            this.btn_reset_edgeDetection.Text = "Reset Edge Detection";
+            this.btn_reset_edgeDetection.UseVisualStyleBackColor = true;
+            this.btn_reset_edgeDetection.Click += new System.EventHandler(this.Button_reset_EdgeDetection);
             // 
-            // label3
+            // label_PixelManipulation
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 33);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(92, 13);
-            this.label3.TabIndex = 56;
-            this.label3.Text = "Pixel Manipulation";
+            this.label_PixelManipulation.AutoSize = true;
+            this.label_PixelManipulation.Location = new System.Drawing.Point(12, 33);
+            this.label_PixelManipulation.Name = "label_PixelManipulation";
+            this.label_PixelManipulation.Size = new System.Drawing.Size(92, 13);
+            this.label_PixelManipulation.TabIndex = 56;
+            this.label_PixelManipulation.Text = "Pixel Manipulation";
             // 
-            // label4
+            // label_EdgeDetection
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(671, 33);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(86, 13);
-            this.label4.TabIndex = 57;
-            this.label4.Text = "Edges Detection";
+            this.label_EdgeDetection.AutoSize = true;
+            this.label_EdgeDetection.Location = new System.Drawing.Point(671, 33);
+            this.label_EdgeDetection.Name = "label_EdgeDetection";
+            this.label_EdgeDetection.Size = new System.Drawing.Size(86, 13);
+            this.label_EdgeDetection.TabIndex = 57;
+            this.label_EdgeDetection.Text = "Edges Detection";
             // 
             // Filters_EdgeDetection
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.ClientSize = new System.Drawing.Size(1351, 633);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.label_EdgeDetection);
+            this.Controls.Add(this.label_PixelManipulation);
+            this.Controls.Add(this.btn_reset_edgeDetection);
             this.Controls.Add(this.btn_apply_edgeDetection);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label_yFilter);
+            this.Controls.Add(this.label_xFilter);
             this.Controls.Add(this.xFilter_listBox);
             this.Controls.Add(this.yFilter_listBox);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.rightPictureBox);
+            this.Controls.Add(this.btn_apply_filters);
             this.Controls.Add(this.btn_rainbowFilter);
             this.Controls.Add(this.btn_swapFilter);
             this.Controls.Add(this.tbx_imageName);
             this.Controls.Add(this.btn_saveImage);
             this.Controls.Add(this.btn_resetFilter);
             this.Controls.Add(this.btn_loadImage);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.leftPictureBox);
             this.Name = "Filters_EdgeDetection";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.leftPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rightPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
-        public System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListBox xFilter_listBox;
-        private System.Windows.Forms.ListBox yFilter_listBox;
-        private System.Windows.Forms.Button btn_apply_edgeDetection;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
     }
 }
 
