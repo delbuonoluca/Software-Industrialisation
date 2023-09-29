@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PictureBox.Image.Testes
+namespace EdgeDetectionApp
 {
     public class Image
     {

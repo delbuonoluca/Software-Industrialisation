@@ -4,7 +4,7 @@ using System.IO;
 using System.Windows.Forms;
 
 
-namespace PictureBox.Image.Testes
+namespace EdgeDetectionApp
 {
     public partial class Filters_EdgeDetection : Form
     {

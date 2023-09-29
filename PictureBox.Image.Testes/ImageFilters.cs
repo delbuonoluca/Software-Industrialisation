@@ -4,7 +4,7 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using System.Runtime.InteropServices;
 
-namespace PictureBox.Image.Testes
+namespace EdgeDetectionApp
 {
     public static class ImageFilters
     {

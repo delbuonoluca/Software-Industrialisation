@@ -1,7 +1,9 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PictureBox.Image.Testes", "PictureBox.Image.Testes\PictureBox.Image.Testes.csproj", "{58BCF607-4F49-4277-8B26-F30D6BEBAA1D}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EdgeDetectionApp", "PictureBox.Image.Testes\EdgeDetectionApp.csproj", "{58BCF607-4F49-4277-8B26-F30D6BEBAA1D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

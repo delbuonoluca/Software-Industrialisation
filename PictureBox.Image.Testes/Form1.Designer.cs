@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace PictureBox.Image.Testes
+namespace EdgeDetectionApp
 {
     partial class Filters_EdgeDetection
     {

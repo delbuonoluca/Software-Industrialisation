@@ -1,0 +1,11 @@
+C:\Users\guillaum.rey2\Source\Repos\Software-Industrialisation\PictureBox.Image.Testes\bin\Debug\PictureBox.Image.Testes.exe.config
+C:\Users\guillaum.rey2\Source\Repos\Software-Industrialisation\PictureBox.Image.Testes\bin\Debug\PictureBox.Image.Testes.exe
+C:\Users\guillaum.rey2\Source\Repos\Software-Industrialisation\PictureBox.Image.Testes\bin\Debug\PictureBox.Image.Testes.pdb
+C:\Users\guillaum.rey2\Source\Repos\Software-Industrialisation\PictureBox.Image.Testes\obj\x86\Debug\EdgeDetectionApp.csproj.AssemblyReference.cache
+C:\Users\guillaum.rey2\Source\Repos\Software-Industrialisation\PictureBox.Image.Testes\obj\x86\Debug\PictureBox.Image.Testes.Properties.Resources.resources
+C:\Users\guillaum.rey2\Source\Repos\Software-Industrialisation\PictureBox.Image.Testes\obj\x86\Debug\EdgeDetectionApp.csproj.GenerateResource.cache
+C:\Users\guillaum.rey2\Source\Repos\Software-Industrialisation\PictureBox.Image.Testes\obj\x86\Debug\EdgeDetectionApp.csproj.CoreCompileInputs.cache
+C:\Users\guillaum.rey2\Source\Repos\Software-Industrialisation\PictureBox.Image.Testes\obj\x86\Debug\EdgeDetectionApp.csproj.CopyComplete
+C:\Users\guillaum.rey2\Source\Repos\Software-Industrialisation\PictureBox.Image.Testes\obj\x86\Debug\PictureBox.Image.Testes.exe
+C:\Users\guillaum.rey2\Source\Repos\Software-Industrialisation\PictureBox.Image.Testes\obj\x86\Debug\PictureBox.Image.Testes.pdb
+C:\Users\guillaum.rey2\Source\Repos\Software-Industrialisation\PictureBox.Image.Testes\obj\x86\Debug\EdgeDetectionApp.Filters_EdgeDetection.resources

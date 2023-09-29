@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace PictureBox.Image.Testes
+namespace EdgeDetectionApp
 {
     static class Program
     {
