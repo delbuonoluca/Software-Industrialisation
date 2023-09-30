@@ -128,3 +128,14 @@ C:\Users\guillaum.rey2\source\repos\Software-Industrialisation\PictureBox.Image.
 C:\Users\guillaum.rey2\source\repos\Software-Industrialisation\PictureBox.Image.Testes\obj\x86\Debug\PictureBox.Image.Testes.csproj.CopyComplete
 C:\Users\guillaum.rey2\source\repos\Software-Industrialisation\PictureBox.Image.Testes\obj\x86\Debug\PictureBox.Image.Testes.exe
 C:\Users\guillaum.rey2\source\repos\Software-Industrialisation\PictureBox.Image.Testes\obj\x86\Debug\PictureBox.Image.Testes.pdb
+C:\Users\lucad\OneDrive - HESSO\Ecole\Semestre 7\625-1 Industrialisation\Software-Indu\PictureBox.Image.Testes\bin\Debug\PictureBox.Image.Testes.exe.config
+C:\Users\lucad\OneDrive - HESSO\Ecole\Semestre 7\625-1 Industrialisation\Software-Indu\PictureBox.Image.Testes\bin\Debug\PictureBox.Image.Testes.exe
+C:\Users\lucad\OneDrive - HESSO\Ecole\Semestre 7\625-1 Industrialisation\Software-Indu\PictureBox.Image.Testes\bin\Debug\PictureBox.Image.Testes.pdb
+C:\Users\lucad\OneDrive - HESSO\Ecole\Semestre 7\625-1 Industrialisation\Software-Indu\PictureBox.Image.Testes\obj\x86\Debug\PictureBox.Image.Testes.csproj.AssemblyReference.cache
+C:\Users\lucad\OneDrive - HESSO\Ecole\Semestre 7\625-1 Industrialisation\Software-Indu\PictureBox.Image.Testes\obj\x86\Debug\PictureBox.Image.Testes.Filters_EdgeDetection.resources
+C:\Users\lucad\OneDrive - HESSO\Ecole\Semestre 7\625-1 Industrialisation\Software-Indu\PictureBox.Image.Testes\obj\x86\Debug\PictureBox.Image.Testes.Properties.Resources.resources
+C:\Users\lucad\OneDrive - HESSO\Ecole\Semestre 7\625-1 Industrialisation\Software-Indu\PictureBox.Image.Testes\obj\x86\Debug\PictureBox.Image.Testes.csproj.GenerateResource.cache
+C:\Users\lucad\OneDrive - HESSO\Ecole\Semestre 7\625-1 Industrialisation\Software-Indu\PictureBox.Image.Testes\obj\x86\Debug\PictureBox.Image.Testes.csproj.CoreCompileInputs.cache
+C:\Users\lucad\OneDrive - HESSO\Ecole\Semestre 7\625-1 Industrialisation\Software-Indu\PictureBox.Image.Testes\obj\x86\Debug\PictureBox.Image.Testes.csproj.CopyComplete
+C:\Users\lucad\OneDrive - HESSO\Ecole\Semestre 7\625-1 Industrialisation\Software-Indu\PictureBox.Image.Testes\obj\x86\Debug\PictureBox.Image.Testes.exe
+C:\Users\lucad\OneDrive - HESSO\Ecole\Semestre 7\625-1 Industrialisation\Software-Indu\PictureBox.Image.Testes\obj\x86\Debug\PictureBox.Image.Testes.pdb

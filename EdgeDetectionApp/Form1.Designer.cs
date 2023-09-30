@@ -14,7 +14,7 @@ namespace EdgeDetectionApp
         private System.Windows.Forms.CheckBox btn_swapFilter;
         private System.Windows.Forms.CheckBox btn_rainbowFilter;
         private System.Windows.Forms.Button btn_apply_filters;
-        public System.Windows.Forms.PictureBox rightPictureBox;
+        private System.Windows.Forms.PictureBox rightPictureBox;
         private System.Windows.Forms.Label label_yFilter;
         private System.Windows.Forms.Label label_xFilter;
         private System.Windows.Forms.ListBox xFilter_listBox;

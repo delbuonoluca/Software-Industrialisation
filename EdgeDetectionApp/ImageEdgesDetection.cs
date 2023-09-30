@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing.Imaging;
 using System.Drawing;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EdgeDetectionApp
 {
@@ -31,11 +27,6 @@ namespace EdgeDetectionApp
 
             Marshal.Copy(newbitmapData.Scan0, pixelbuff, 0, pixelbuff.Length);
             newbitmap.UnlockBits(newbitmapData);
-
-
-            double blue = 0.0;
-            double green = 0.0;
-            double red = 0.0;
 
             double blueX = 0.0;
             double greenX = 0.0;
