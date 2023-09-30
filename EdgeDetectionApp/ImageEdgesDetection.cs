@@ -11,9 +11,14 @@ namespace EdgeDetectionApp
 {
     public class ImageEdgesDetection
     {
-        // CHAT GPT : 
+        // Edge detection method 
         public Bitmap DetectEdges(string xFilter, string yFilter, Bitmap bitmapImg)
         {
+            if (bitmapImg == null)
+            {
+                throw new ArgumentNullException(nameof(bitmapImg), "Input bitmap cannot be null.");
+            }
+
             double[,] xFilterMatrix = GetFilterMatrix(xFilter);
             double[,] yFilterMatrix = GetFilterMatrix(yFilter);
 

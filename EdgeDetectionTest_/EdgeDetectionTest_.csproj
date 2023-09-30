@@ -50,6 +50,8 @@
     <Reference Include="System.Drawing" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EdgeDetectionFilterMatrixTest.cs" />
+    <Compile Include="EdgeDetectionFilterTest.cs" />
     <Compile Include="ImageFiltersTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

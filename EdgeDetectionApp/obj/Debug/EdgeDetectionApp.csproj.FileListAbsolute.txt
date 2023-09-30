@@ -1,0 +1,11 @@
+C:\Users\guillaum.rey2\source\repos\Software-Industrialisation\EdgeDetectionApp\bin\Debug\EdgeDetectionApp.exe.config
+C:\Users\guillaum.rey2\source\repos\Software-Industrialisation\EdgeDetectionApp\bin\Debug\EdgeDetectionApp.exe
+C:\Users\guillaum.rey2\source\repos\Software-Industrialisation\EdgeDetectionApp\bin\Debug\EdgeDetectionApp.pdb
+C:\Users\guillaum.rey2\source\repos\Software-Industrialisation\EdgeDetectionApp\obj\Debug\EdgeDetectionApp.csproj.AssemblyReference.cache
+C:\Users\guillaum.rey2\source\repos\Software-Industrialisation\EdgeDetectionApp\obj\Debug\EdgeDetectionApp.Filters_EdgeDetection.resources
+C:\Users\guillaum.rey2\source\repos\Software-Industrialisation\EdgeDetectionApp\obj\Debug\EdgeDetectionApp.Properties.Resources.resources
+C:\Users\guillaum.rey2\source\repos\Software-Industrialisation\EdgeDetectionApp\obj\Debug\EdgeDetectionApp.csproj.GenerateResource.cache
+C:\Users\guillaum.rey2\source\repos\Software-Industrialisation\EdgeDetectionApp\obj\Debug\EdgeDetectionApp.csproj.CoreCompileInputs.cache
+C:\Users\guillaum.rey2\source\repos\Software-Industrialisation\EdgeDetectionApp\obj\Debug\EdgeDetectionApp.csproj.CopyComplete
+C:\Users\guillaum.rey2\source\repos\Software-Industrialisation\EdgeDetectionApp\obj\Debug\EdgeDetectionApp.exe
+C:\Users\guillaum.rey2\source\repos\Software-Industrialisation\EdgeDetectionApp\obj\Debug\EdgeDetectionApp.pdb

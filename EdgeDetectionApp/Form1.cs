@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
@@ -19,6 +20,7 @@ namespace EdgeDetectionApp
         public Filters_EdgeDetection()
         {
             InitializeComponent();
+            Fill_listBoxes();
         }
 
         // Save the modified image
@@ -54,6 +56,25 @@ namespace EdgeDetectionApp
             }
         }
 
+        // Fill the listboxes
+        private void Fill_listBoxes()
+        {
+            List<string> filterItems = new List<string>
+            {
+                "Laplacian3x3",
+                "Laplacian5x5",
+                "Sobel3x3Horizontal",
+                "Sobel3x3Vertical",
+                "Prewitt3x3Horizontal",
+                "Prewitt3x3Vertical",
+                "Kirsch3x3Horizontal",
+                "Kirsch3x3Vertical"
+            };
+            this.xFilter_listBox.Items.AddRange(filterItems.ToArray());
+            this.yFilter_listBox.Items.AddRange(filterItems.ToArray());
+
+        }
+
         #endregion
 
         #region MACHADO_Events      
@@ -83,38 +104,28 @@ namespace EdgeDetectionApp
             FilteredImage = Origin;
         }
 
-        public void Button_apply_swapFilter(object sender, EventArgs e)
+        private void Btn_SelectedFilters(object sender, EventArgs e)
         {
             if (Origin != null)
             {
-                leftPictureBox.Image = FilteredImage;
-                if (btn_swapFilter.Checked)
+                if (btn_swapFilter.Checked && !btn_rainbowFilter.Checked)
                 {
-                    leftPictureBox.Image = ImageFilters.RevertSwapFilter(new Bitmap(FilteredImage));
-
+                    leftPictureBox.Image = ImageFilters.SwapFilter(new Bitmap(Origin));
                 }
-                else
+                else if (btn_rainbowFilter.Checked && !btn_swapFilter.Checked)
                 {
-                    leftPictureBox.Image = ImageFilters.SwapFilter(new Bitmap(FilteredImage));
+                    leftPictureBox.Image = ImageFilters.RainbowFilter(new Bitmap(Origin));
                 }
-                FilteredImage = leftPictureBox.Image;
-            }
-        }
-
-        public void Button_apply_rainbowFilter(object sender, EventArgs e)
-        {
-            if (Origin != null)
-            {
-                leftPictureBox.Image = FilteredImage;
-                if (btn_rainbowFilter.Checked)
+                else if (btn_rainbowFilter.Checked && btn_swapFilter.Checked)
                 {
+                    leftPictureBox.Image = ImageFilters.SwapFilter(new Bitmap(Origin));
+                    FilteredImage = leftPictureBox.Image;
                     leftPictureBox.Image = ImageFilters.RainbowFilter(new Bitmap(FilteredImage));
                 }
                 else
                 {
-                    leftPictureBox.Image = ImageFilters.RevertRainbowFilter(new Bitmap(FilteredImage));
+                    leftPictureBox.Image = Origin;
                 }
-                FilteredImage = leftPictureBox.Image;
             }
         }
 
