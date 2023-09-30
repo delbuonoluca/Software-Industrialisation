@@ -1,2 +1,0 @@
-C:\Users\guillaum.rey2\source\repos\Software-Industrialisation\EdgeDetectionTest\obj\Debug\EdgeDetectionTest.csproj.AssemblyReference.cache
-C:\Users\guillaum.rey2\source\repos\Software-Industrialisation\EdgeDetectionTest\obj\Debug\EdgeDetectionTest.csproj.CoreCompileInputs.cache
