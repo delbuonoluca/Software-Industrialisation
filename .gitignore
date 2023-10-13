@@ -1,0 +1,17 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+**/.vs
+**/Debug
+**/Release
+**/bin
+**/obj
+**/obj/x86/Debug
+Debug
+Release
+bin
+obj
+
+# Add .cache files
+**/.cache
