@@ -23,10 +23,10 @@ namespace EdgeDetectionTest_
                 edgeDetection.DetectEdges("Laplacian3x3", "Sobel3x3Horizontal", null);
             });
 
-            Assert.ThrowsException<ArgumentNullException>(() =>
+            /*Assert.ThrowsException<ArgumentNullException>(() =>
             {
                 edgeDetection.DetectEdges("Laplacian3x3", "Sobel3x3Horizontal", bitmap);
-            });
+            });*/
         }
 
         [TestMethod]

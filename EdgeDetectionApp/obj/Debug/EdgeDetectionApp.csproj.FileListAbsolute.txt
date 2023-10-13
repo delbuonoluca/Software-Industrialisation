@@ -9,3 +9,14 @@ C:\Users\guillaum.rey2\source\repos\Software-Industrialisation\EdgeDetectionApp\
 C:\Users\guillaum.rey2\source\repos\Software-Industrialisation\EdgeDetectionApp\obj\Debug\EdgeDetectionApp.csproj.CopyComplete
 C:\Users\guillaum.rey2\source\repos\Software-Industrialisation\EdgeDetectionApp\obj\Debug\EdgeDetectionApp.exe
 C:\Users\guillaum.rey2\source\repos\Software-Industrialisation\EdgeDetectionApp\obj\Debug\EdgeDetectionApp.pdb
+C:\Users\lucad\OneDrive - HESSO\Ecole\Semestre 7\625-1 Industrialisation\Software-Indu\EdgeDetectionApp\bin\Debug\EdgeDetectionApp.exe.config
+C:\Users\lucad\OneDrive - HESSO\Ecole\Semestre 7\625-1 Industrialisation\Software-Indu\EdgeDetectionApp\bin\Debug\EdgeDetectionApp.exe
+C:\Users\lucad\OneDrive - HESSO\Ecole\Semestre 7\625-1 Industrialisation\Software-Indu\EdgeDetectionApp\bin\Debug\EdgeDetectionApp.pdb
+C:\Users\lucad\OneDrive - HESSO\Ecole\Semestre 7\625-1 Industrialisation\Software-Indu\EdgeDetectionApp\obj\Debug\EdgeDetectionApp.csproj.AssemblyReference.cache
+C:\Users\lucad\OneDrive - HESSO\Ecole\Semestre 7\625-1 Industrialisation\Software-Indu\EdgeDetectionApp\obj\Debug\EdgeDetectionApp.Filters_EdgeDetection.resources
+C:\Users\lucad\OneDrive - HESSO\Ecole\Semestre 7\625-1 Industrialisation\Software-Indu\EdgeDetectionApp\obj\Debug\EdgeDetectionApp.Properties.Resources.resources
+C:\Users\lucad\OneDrive - HESSO\Ecole\Semestre 7\625-1 Industrialisation\Software-Indu\EdgeDetectionApp\obj\Debug\EdgeDetectionApp.csproj.GenerateResource.cache
+C:\Users\lucad\OneDrive - HESSO\Ecole\Semestre 7\625-1 Industrialisation\Software-Indu\EdgeDetectionApp\obj\Debug\EdgeDetectionApp.csproj.CoreCompileInputs.cache
+C:\Users\lucad\OneDrive - HESSO\Ecole\Semestre 7\625-1 Industrialisation\Software-Indu\EdgeDetectionApp\obj\Debug\EdgeDetectionApp.csproj.CopyComplete
+C:\Users\lucad\OneDrive - HESSO\Ecole\Semestre 7\625-1 Industrialisation\Software-Indu\EdgeDetectionApp\obj\Debug\EdgeDetectionApp.exe
+C:\Users\lucad\OneDrive - HESSO\Ecole\Semestre 7\625-1 Industrialisation\Software-Indu\EdgeDetectionApp\obj\Debug\EdgeDetectionApp.pdb
