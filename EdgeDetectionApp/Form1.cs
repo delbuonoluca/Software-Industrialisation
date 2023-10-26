@@ -11,7 +11,6 @@ namespace EdgeDetectionApp
     {
         #region MACHADO_Atributes
 
-        Bitmap map;
         System.Drawing.Image Origin;
         System.Drawing.Image FilteredImage;
 
@@ -49,7 +48,6 @@ namespace EdgeDetectionApp
                 Bitmap temp = new Bitmap(leftPictureBox.Image,
                    new Size(leftPictureBox.Width, leftPictureBox.Height));
                 leftPictureBox.Image = temp;
-                map = new Bitmap(leftPictureBox.Image);
                 Origin = leftPictureBox.Image;
                 tbx_imageName.Text = Path.GetFileNameWithoutExtension(op.FileName) + "_edgeDetected"; // CHAT GPT : 
                 FilteredImage = leftPictureBox.Image;
@@ -108,24 +106,18 @@ namespace EdgeDetectionApp
         {
             if (Origin != null)
             {
-                if (btn_swapFilter.Checked && !btn_rainbowFilter.Checked)
+                FilteredImage = Origin;
+
+                if (btn_swapFilter.Checked)
                 {
-                    leftPictureBox.Image = ImageFilters.SwapFilter(new Bitmap(Origin));
+                    FilteredImage = ImageFilters.SwapFilter(new Bitmap(FilteredImage));
                 }
-                else if (btn_rainbowFilter.Checked && !btn_swapFilter.Checked)
+                if (btn_rainbowFilter.Checked)
                 {
-                    leftPictureBox.Image = ImageFilters.RainbowFilter(new Bitmap(Origin));
+                    FilteredImage = ImageFilters.RainbowFilter(new Bitmap(FilteredImage));
                 }
-                else if (btn_rainbowFilter.Checked && btn_swapFilter.Checked)
-                {
-                    leftPictureBox.Image = ImageFilters.SwapFilter(new Bitmap(Origin));
-                    FilteredImage = leftPictureBox.Image;
-                    leftPictureBox.Image = ImageFilters.RainbowFilter(new Bitmap(FilteredImage));
-                }
-                else
-                {
-                    leftPictureBox.Image = Origin;
-                }
+                
+                leftPictureBox.Image = FilteredImage;
             }
         }
 

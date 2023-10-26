@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 
 namespace EdgeDetectionApp
 {
-    public class ImageFilters
+    public static class ImageFilters
     {
         // Rainbow filter
         public static Bitmap RainbowFilter(Bitmap bmp)
@@ -17,7 +17,7 @@ namespace EdgeDetectionApp
             }
 
             Bitmap temp = new Bitmap(bmp.Width, bmp.Height);
-            int raz = bmp.Height / 4;
+            int raz = bmp.Width / 5;
 
             for (int i = 0; i < bmp.Width; i++)
             {
